@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<%
+meta = {
+  title: '〓トップページ〓',
+  description: '〓トップページのディスクリプション〓',
+};
+%>
+<html>
+<head>
+<!-- head -->
+<%- include('./_partial/_head', {meta:meta}); %>
+<!-- common css -->
+<%- include('./_partial/assets/_common-css') %>
+<!-- common js -->
+<%- include('./_partial/assets/_common-js') %>
+</head>
+
+<body>
+<!-- site header -->
+<%- include('./_partial/layout/_site-header') %>
+<div class="text-xl my-5">トップ</div>
+<%- include('./_partial/layout/_site-footer') %>
+</body>
+</html>
