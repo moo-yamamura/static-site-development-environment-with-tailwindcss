@@ -39,11 +39,10 @@ const localServer = done => {
 
   watch(path.js.src,
     gulp.series(
-      gulp.parallel(
-        javascriptLint,
-        javascriptCompile,
-        javascriptBundle
-      ),
+      javascriptLint,
+      javascriptCompile,
+      javascriptBundle,
+      javascriptBundleMinify,
       browserReload
     )
   );
