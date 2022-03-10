@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import { path } from './path.js'; // ファイルパス
 import babel from 'gulp-babel'; // es6コンパイル
-import uglify from 'gulp-uglify'; // javascript圧縮
 import plumber from 'gulp-plumber'; // エラー時のタスク停止防止
 // モード切替
 import module from 'module';
@@ -24,9 +23,6 @@ const javascriptCompile = done => {
     .pipe(babel({
       'presets': ['@babel/preset-env']
     }))
-    .pipe(mode.production(
-      uglify())
-    )
     .pipe(gulp.dest(path.js.dest));
 
   done();
