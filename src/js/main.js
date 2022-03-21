@@ -1,3 +1,3 @@
-import { siteHeader } from './_partial/_site-header.js';
+import { siteHeader } from './partial/_site-header.js';
 
 siteHeader();
